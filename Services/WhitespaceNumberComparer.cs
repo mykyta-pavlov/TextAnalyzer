@@ -18,7 +18,7 @@ namespace TextAnalyzer.Services
             //Return the difference of words numbers
             return "The text has " 
                    + Math.Abs(WhitespaceCounter(textToAnalyze) - WhitespaceCounter(textFromFile)) + comparisonWord 
-                   + " words than sample text";
+                   + " whitespace than sample text";
         }
 
         private int WhitespaceCounter(string text)
