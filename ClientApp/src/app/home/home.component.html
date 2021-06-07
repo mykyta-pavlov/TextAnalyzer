@@ -1,0 +1,21 @@
+<h1>Enter text for evaluation:</h1>
+<div class="form-group purple-border">
+  <textarea class="form-control" id="exampleFormControlTextarea4" rows="3" #text></textarea>
+</div>
+
+<div class="row">
+  <div class="col-1">
+    <button type="submit" class="btn btn-dark" (click)="onSubmit(text.value)">Analyze</button>
+  </div>
+  <div class="col-8">
+    <p *ngIf="showProgress">Loading...</p>
+  </div>
+</div>
+
+<h3 class="pt-5">Result:</h3>
+
+<div class="container pt-2" *ngFor="let result of resultsOfEvaluation">
+  <div class="row">
+    {{ result }}
+  </div>
+</div>
